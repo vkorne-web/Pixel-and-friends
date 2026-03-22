@@ -174,7 +174,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(13, 9, 20, 0.7), rgba(13, 9, 20, 0.9)), url('/assets/hero_background.png');
+    background-image: linear-gradient(rgba(13, 9, 20, 0.7), rgba(13, 9, 20, 0.9)), url('../assets/images/hero_background.png');
     background-size: cover;
     background-position: center;
     text-align: center;
