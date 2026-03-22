@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel & Friends - Gamer Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="logo">🎮 Pixel & Friends</div>
+        <nav>
+            <button class="tab-btn active" data-target="inicio">INICIO</button>
+            <button class="tab-btn" data-target="juegos">JUEGOS</button>
+            <button class="tab-btn" data-target="eventos">EVENTOS</button>
+            <button class="tab-btn" data-target="prompts">PROMPTS</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio" class="tab-content active">
+            <div class="hero">
+                <div class="hero-content glass-panel">
+                    <h1>Pixel & Friends</h1>
+                    <p class="slogan">Conectamos jugadores, unimos partidas</p>
+                    <button id="btn-unete" class="btn-neon">Únete a la comunidad</button>
+                </div>
+            </div>
+
+            <div class="container section-padding">
+                <div class="quienes-somos glass-panel neon-border-blue">
+                    <h2>Quiénes somos</h2>
+                    <p>Somos tu nuevo punto de encuentro en la ciudad. Un local físico diseñado por y para gamers, con áreas de PCs de alto rendimiento, zonas de consolas de última generación y un espacio 'chill' con sofás para relajarte entre partidas.</p>
+                </div>
+
+                <div class="grid-2 mt-40">
+                    <div class="horarios glass-panel neon-border-pink">
+                        <h2>Horarios</h2>
+                        <ul>
+                            <li><strong>Lunes a Viernes:</strong> 16:00 - 00:00</li>
+                            <li><strong>Sábados:</strong> 12:00 - 02:00</li>
+                            <li><strong>Domingos:</strong> 12:00 - 22:00</li>
+                        </ul>
+                    </div>
+                    <div class="ubicacion glass-panel neon-border-blue">
+                        <h2>Ubicación</h2>
+                        <p>C/ Gamers, 42 - Barcelona</p>
+                        <div class="mapa">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.4354898399596!2d2.168568015668987!3d41.38289397926462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f5b4de3b65%3A0x7b4010375ce541b!2sBarcelona!5e0!3m2!1ses!2ses!4v1619808332149!5m2!1ses!2ses" width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="por-que-elegirnos mt-40">
+                    <h2 class="text-center">Por qué elegirnos</h2>
+                    <div class="grid-3 mt-20">
+                        <div class="card glass-panel text-center">
+                            <div class="icon">👥</div>
+                            <h3>Ambiente social</h3>
+                            <p>Conoce gente nueva, haz equipos y disfruta jugando acompañado de una gran comunidad.</p>
+                        </div>
+                        <div class="card glass-panel text-center neon-border-pink">
+                            <div class="icon">🖥️</div>
+                            <h3>Equipos gaming</h3>
+                            <p>PCs con RTX 4080, monitores 240Hz, y consolas de última generación disponibles.</p>
+                        </div>
+                        <div class="card glass-panel text-center">
+                            <div class="icon">🔥</div>
+                            <h3>Comunidad activa</h3>
+                            <p>Eventos semanales, torneos y noches temáticas para que nunca te aburras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN JUEGOS -->
+        <section id="juegos" class="tab-content">
+            <div class="container section-padding">
+                <h2 class="text-center">Catálogo de Juegos</h2>
+                <div class="filters text-center mt-20">
+                    <button class="filter-btn active" data-platform="all">Todos</button>
+                    <button class="filter-btn" data-platform="PC">PC</button>
+                    <button class="filter-btn" data-platform="PS5">PS5</button>
+                    <button class="filter-btn" data-platform="Xbox">Xbox</button>
+                    <button class="filter-btn" data-platform="Switch">Switch</button>
+                </div>
+                <div id="games-grid" class="grid-3 mt-40">
+                    <!-- Dinámico con JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN EVENTOS -->
+        <section id="eventos" class="tab-content">
+            <div class="container section-padding">
+                <h2 class="text-center">Próximos Eventos</h2>
+                <div class="grid-2 mt-40">
+                    <div class="eventos-lista" id="events-list">
+                        <!-- Dinámico con JS -->
+                    </div>
+                    <div class="evento-form-container glass-panel neon-border-blue">
+                        <h3>Inscripción</h3>
+                        <form id="evento-form">
+                            <div class="form-group">
+                                <label for="ev-nombre">Nombre completo</label>
+                                <input type="text" id="ev-nombre" required class="glass-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="ev-email">Email</label>
+                                <input type="email" id="ev-email" required class="glass-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="ev-select">Evento</label>
+                                <select id="ev-select" required class="glass-input">
+                                    <option value="">Selecciona un evento...</option>
+                                    <!-- Dinámico con JS -->
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-neon btn-blue w-100 mt-10">Inscribirse</button>
+                        </form>
+                        <div id="ev-msg" class="msg-success mt-10" style="display:none;">¡Inscripción guardada con éxito!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PROMPTS -->
+        <section id="prompts" class="tab-content">
+            <div class="container section-padding">
+                <h2 class="text-center">Prompts Utilizados</h2>
+                <p class="text-center mb-40">Historial completo de los prompts usados para crear esta web</p>
+                <div id="prompts-list" class="grid-1">
+                    <!-- Dinámico con JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Únete -->
+    <div id="modal-unete" class="modal">
+        <div class="modal-content glass-panel neon-border-pink">
+            <span class="close-modal">&times;</span>
+            <h2 class="mb-20">Únete a Pixel & Friends</h2>
+            <form id="join-form">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" required class="glass-input">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required class="glass-input">
+                </div>
+                <div class="form-group">
+                    <label>Juegos Favoritos</label>
+                    <input type="text" placeholder="Ej: Valorant, LoL, Smash Bros" required class="glass-input">
+                </div>
+                <button type="submit" class="btn-neon w-100 mt-10">Enviar solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Audio Tracker Flotante -->
+    <div class="audio-player glass-panel">
+        <div class="audio-info" style="display:flex; align-items:center; gap:8px;">
+            <span class="icon">🎵</span>
+            <span>Presentación</span>
+        </div>
+        <button id="btn-play-audio" class="btn-audio" style="margin-left:auto;">▶ Play</button>
+        <!-- Audio de presentación -->
+        <audio id="bg-audio" loop>
+            <source src="assets/pixel.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
